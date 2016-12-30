@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>All Round Student Evaluation System</title>
+ 
+ <link rel="stylesheet" type="text/css" href="style.css" />
+  <style type='text/css'>
+   input[type='range'] {
+-webkit-appearance: none;
+padding-left:2px; padding-right:2px;
+-webkit-border-radius: 5px;
+background-image: -webkit-linear-gradient(top, #000000, #333333, #000000);
+}
+ 
+ 
+ 
+</style>
+<style type="text/css">
+            p { word-spacing: 30px; }
+        </style>
+ 
+<script>
+ function updateSliderAcads(slideAmount) {
+           document.getElementById("chosena").innerHTML=slideAmount/10;
+}
+function updateSliderDeb(slideAmount) {
+           document.getElementById("chosendeb").innerHTML=slideAmount;
+}
+function updateSliderDan(slideAmount) {
+           document.getElementById("chosendan").innerHTML=slideAmount;
+}
+</script>
+
+</head>
+<body background="lbs.jpg">
+
+ 
+<font size="3" face="Comic Sans MS" color="white">
+ <h1><u><b>All Round Student Evaluation System</b></u></h1>
+
+ 
+ <p>Enter the following:</p>
+ 
+ 
+
+
+  <form method="post" action="ases.php">
+    <label for="acads">Academics(out of 10):</label>
+    <!--<input type="text" id="acads" name="academic" />-->
+	<input id="defaultSlider" name="academic" type="range" min="40" max="100" onchange="updateSliderAcads(this.value)"/>
+	<div id="chosena">0</div>
+	<br />
+    <label for="sports">Sports(out of 10):</label></br>
+    <!--<input type="text" id="sports" name="sports" /><br />-->
+    <input type="radio" name="sports" value="10">National level<br>
+<input type="radio" name="sports" value="8">State level<br>
+<input type="radio"name="sports" value="6">District level<br>
+<input type="radio" name="sports" value="4">InterSchool/College<br>
+<input type="radio" name="sports" value="0">None<br></br></br>
+    <label for="debdisc">Debate Discussions(Out of 10):</label>
+   <!-- <input type="text" id="debdisc" name="debdisc" /><br />-->
+   	<!--<input id="defaultSlider" name="debdisc" type="range" min="0" max="10" step="1" onchange="updateSliderDeb(this.value)" />-->
+	<!--<div id="chosendeb">0</div>-->
+<br><input type="radio" name="debdisc" value="10">State/National level<br>
+<input type="radio"name="debdisc" value="5">District level<br>
+<input type="radio" name="debdisc" value="3">InterSchool/College<br>
+<input type="radio" name="debdisc" value="0">None<br>
+	<br /></br>
+
+    <label for="dancedram">Dance/Drama/Music</label>
+   <!-- <input type="text" id="dancedram" name="dancedram" /><br />-->
+    <!--label for="tpp">TPP</label-->
+    <!--input type="text" id="tpp" name="tpp" /-->
+	<input id="defaultSlider" name="dancedram" type="range" min="0" max="10" step="1" onchange="updateSliderDan(this.value)"/>
+	<div id="chosendan">0</div>
+	<br />
+<label for="tpp">Technical paper presentation         </label></br>
+<select name="tpp">
+<option value="0"><font size="20" face="Comic Sans MS" color="black">No</option>
+<option value="1"><font size="20" face="Comic Sans MS" color="black">Yes</option>
+
+</select>
+</br>
+<label for="wexp">Work Experience        </label></br>
+<select name="wexp">
+<option value="0"><font size="20" face="Comic Sans MS" color="black">No</option>
+<option value="1"><font size="20" face="Comic Sans MS" color="black">Yes</option>
+
+</select>
+    
+   
+    
+    
+ <br />
+           
+  
+    <input type="submit" value="Evaluate Yourself" style="background-color:yellow; height:30px;width:300px ; border:none" />
+       
+   
+    </button>
+    
+    
+
+</td>
+</form>
+</body>
+</html>
